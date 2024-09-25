@@ -26,15 +26,18 @@ columns_to_display_cancel = ["start_datetime", "end_datetime", "apartment", "nam
 # TEXT
 # home
 home_header = "Bienvenue au Capitole"
-home_instructions = '''Veuillez utiliser la barre de navigation ci-dessus afin de
+home_instructions = '''Veuillez utiliser la barre de navigation ci-dessus afin: 
 
-- réserver un apartement aux dates désirées
-- annuler une réservation déjà passée
-- visualiser le planning des réservations
+- de réserver un apartement aux dates désirées
+- d'annuler une réservation déjà passée
+- de visualiser le planning des réservations
+
+
+Si vous ne voyez pas l'intégralité de la barre de navigation sur un smartphone, passez en mode horizontal.
 
 
 Lors de votre réservation, un email vous sera envoyé contenant un code unique de réservation.
-Conserver bien cet email car en cas d'annulation ce code vous sera demandé.
+Conservez bien cet email car en cas d'annulation ce code vous sera demandé.
 
 
 Nous vous souhaitons un agréable séjour au Capitole
@@ -65,7 +68,7 @@ apartment_text_available = "Appartements disponibles à ces dates"
 apartment_subheader = "Réservation: "
 apartment_text_name = "Entrer votre prénom"
 apartment_text_email = "Entrer votre email"
-apartment_text_nb_people = "Entrer le nombre de personnes qui seront présentes"
+apartment_text_nb_people = "Entrer le nombre de personnes"
 apartment_warning_email = "Entrer un email valide"
 apartment_warning_nb_people = "Le nombre de personnes dépasse la capacité de l'appartement"
 booking_submit = "Réserver"
@@ -92,23 +95,45 @@ calendar_options = {
     "initialView": "dayGridMonth",
     "resources": [
         {"id": "Studio", "title": "Studio"},
-        {"id": "Appartement Avant", "title": "Appartement Avant"},
-        {"id": "Appartement Arrière", "title": "Appartement Arrière"}
+        {"id": "App.Avant", "title": "App.Avant"},
+        {"id": "App.Arrière", "title": "App.Arrière"}
     ],
 }
 
 custom_css = """
+    .fc-dom-1 {
+        height: 250px;
+    }
     .fc-event-past {
         opacity: 0.8;
     }
     .fc-event-time {
-        font-style: italic;
+        font-size: 0rem;
+        content: unset;
     }
     .fc-event-title {
-        font-weight: 700;
+        font-size: 0.6rem;
     }
     .fc-toolbar-title {
-        font-size: 2rem;
+        font-size: 1.1rem;
+    }
+    .fc-col-header-cell-cushion {
+        font-size: 0.8rem;
+    }
+    .fc-daygrid-day-number {
+        font-size: 0.6rem;
+    }
+    .fc-title {
+        font-size: 1.1rem;
+    }
+    .fc-today-button {
+        font-size: 0.8rem;
+    }
+    .fc-prev-button {
+        font-size: 0.8rem;
+    }
+    .fc-next-button {
+        font-size: 0.8rem;
     }
 """
 
@@ -116,14 +141,16 @@ custom_css = """
 styles = {
     "nav": {
         "background-color": "royalblue",
+        "text-align": "left",
         "justify-content": "left",
     },
     "img": {
-        "padding-right": "14px",
+        "padding-right": "1px",
     },
     "span": {
         "color": "white",
-        "padding": "14px",
+        "font-size": "14px",
+        "padding": "8px",
     },
     "active": {
         "background-color": "blue",

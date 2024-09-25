@@ -148,7 +148,8 @@ def view_reservations():
     else:
         calendar_events = utilities.build_calendar_events(booked_apartments)
         calen = calendar(events=calendar_events,
-                         options=variables.calendar_options)
+                         options=variables.calendar_options,
+                         custom_css=variables.custom_css)
         calen
         # st.dataframe(booked_apartments, hide_index=True) # To see df all bookings
 
