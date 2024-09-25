@@ -6,7 +6,7 @@ import datetime
 
 
 def is_apartment_available(start_date, start_time, end_date, end_time):
-    df = data.load_csv()
+    df = data.load_dbx(variables.file_dbx)
 
     start_datetime = datetime.datetime.combine(start_date, start_time)
     end_datetime = datetime.datetime.combine(end_date, end_time)
@@ -29,7 +29,7 @@ def is_apartment_available(start_date, start_time, end_date, end_time):
 
 
 def add_booking(start_date, start_time, end_date, end_time, apartment, name, email, nb_people):
-    df = data.load_csv()
+    df = data.load_dbx(variables.file_dbx)
 
     start_datetime = datetime.datetime.combine(start_date, start_time)
     end_datetime = datetime.datetime.combine(end_date, end_time)
