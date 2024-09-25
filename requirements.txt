@@ -1,0 +1,7 @@
+flake8
+pandas
+python_dotenv
+dropbox
+streamlit
+streamlit-calendar
+streamlit-navigation-bar
