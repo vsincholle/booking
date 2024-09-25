@@ -14,7 +14,7 @@ encoding = 'utf-8'
 apartments = ["Studio", "Appartement avant", "Appartement arrière"]
 
 # Define file paths for storing booking data
-booking_data_file = "../../data/booking_data.csv"  # file downlaoded as csv
+booking_data_file = "booking_data.csv"  # file downlaoded as csv
 file_dbx = '/booking/booking_data.csv'  # path for dropbox could contain folder if we want to oragnize on dbx
 
 # Define columns to create for DataFrame is file is not existing
