@@ -26,15 +26,13 @@ columns_to_display_cancel = ["start_datetime", "end_datetime", "apartment", "nam
 # TEXT
 # home
 home_header = "Bienvenue au Capitole"
-home_instructions = '''Veuillez utiliser la barre de navigation ci-dessus afin: 
+home_instructions = '''Veuillez utiliser le menu de navigation à gauche afin: 
 
 - de réserver un apartement aux dates désirées
 - d'annuler une réservation déjà passée
 - de visualiser le planning des réservations
 
-
-Si vous ne voyez pas l'intégralité de la barre de navigation sur un smartphone, passez en mode horizontal.
-
+Si vous ne voyez pas le menu de navigation, veuillez cliquer sur la flèche en haut à gauche.
 
 Lors de votre réservation, un email vous sera envoyé contenant un code unique de réservation.
 Conservez bien cet email car en cas d'annulation ce code vous sera demandé.

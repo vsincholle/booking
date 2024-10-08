@@ -189,7 +189,20 @@ st.set_page_config(initial_sidebar_state="collapsed")
 if not check_password():
     print('---> Do not pass password step')
     st.stop()  # Do not continue if check_password is not True.
-page = st_navbar(["Home", "Réserver", "Annuler", "Planning"], styles=variables.styles)
+# page = st_navbar(["Home", "Réserver", "Annuler", "Planning"], styles=variables.styles)
+
+with st.sidebar:
+    page = st.radio(
+        "Pages",
+    ["Home", "Réserver","Annuler","Planning"],
+    captions=[
+        "Retour à la page principale",
+        "Réserver un appartement du Capitole",
+        "Annuler une réservation",
+        "Voir les réservations effectuéees"
+    ],
+)
+    
 if page == "Réserver":
     book_apartment()
 elif page == "Annuler":
@@ -200,3 +213,4 @@ elif page == "Home":
     home()
 else:
     check_password()
+
